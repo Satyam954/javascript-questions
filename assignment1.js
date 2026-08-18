@@ -214,22 +214,188 @@ if (experience >= 10) {
   console.log("no bonus below 2 years experience", salary);
 }
 
-
 // .18. Age Category
 
-let AGE = 59
-if (AGE<0) {
-    console.log("age not be negative")
-}
-else if (AGE>=0 && AGE<=12) {
-    console.log("child")
-} else if (AGE>=13 && AGE<=19) {
-    console.log("teenagers")
-} else if (AGE>=20 && AGE<=59) {
-    console.log("Adult")
+let AGE = 59;
+if (AGE < 0) {
+  console.log("age not be negative");
+} else if (AGE >= 0 && AGE <= 12) {
+  console.log("child");
+} else if (AGE >= 13 && AGE <= 19) {
+  console.log("teenagers");
+} else if (AGE >= 20 && AGE <= 59) {
+  console.log("Adult");
 } else {
-    console.log(" Senior Citizen")
-} 
-
+  console.log(" Senior Citizen");
+}
 
 // Section 4 - switch-case
+
+// 19. Day of the Wee
+
+let day = 7;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  case 5:
+    console.log("Friday");
+    break;
+  case 6:
+    console.log("Saturday");
+    break;
+  case 7:
+    console.log("Sunday");
+    break;
+
+  default:
+    console.log("Invalid day");
+    break;
+}
+
+// 20. Simple Calculator
+
+let firstn = 510;
+let secondn = 10;
+
+let operator = "%";
+
+switch (operator) {
+  case "+":
+    console.log(firstn + secondn);
+    break;
+  case "-":
+    console.log(firstn - secondn);
+    break;
+  case "*":
+    console.log(firstn * secondn);
+    break;
+  case "/":
+    if (secondn === 0) {
+      console.log("0 is not divisible");
+    } else {
+      console.log(firstn / secondn);
+    }
+    break;
+
+  case "%":
+    if (secondn === 0) {
+      console.log("0 is not divisible");
+    } else {
+      console.log(firstn % secondn);
+    }
+    break;
+
+  default:
+    console.log("select a valid operation");
+    break;
+}
+
+// 21. Month Name
+
+let MONnum = 10;
+
+switch (MONnum) {
+  case 1:
+    console.log("January");
+    break;
+  case 2:
+    console.log("February");
+    break;
+  case 3:
+    console.log("March");
+    break;
+  case 4:
+    console.log("April");
+    break;
+  case 5:
+    console.log("May");
+    break;
+  case 6:
+    console.log("June");
+    break;
+  case 7:
+    console.log("July");
+    break;
+  case 8:
+    console.log("August");
+    break;
+  case 9:
+    console.log("September");
+    break;
+  case 10:
+    console.log("Octuber");
+    break;
+  case 11:
+    console.log("November");
+    break;
+  case 12:
+    console.log("December");
+    break;
+
+  default:
+    console.log("Not a valid months number");
+    break;
+}
+
+// 22. Menu-Based Calculator
+
+let menu = 5;
+let nb1 = 10;
+let nb2 = 20;
+
+switch (menu) {
+  case 1:
+    console.log(nb1 + nb2);
+    break;
+  case 2:
+    console.log(nb1 - nb2);
+    break;
+  case 3:
+    console.log(nb1 * nb2);
+    break;
+  case 4:
+    console.log(nb1 / nb2);
+    break;
+  case 5:
+    console.log(nb1 % nb2);
+    break;
+
+  default:
+    console.log("Select the valid menu number");
+    break;
+}
+
+
+// 23. Traffic Signal
+
+let light = "green"
+
+switch (light) {
+  case "green":
+    console.log("Go");
+    break;
+  case "yellow":
+    console.log("Wait");
+    break;
+  case "red":
+    console.log("Stop");
+    break;
+
+  default:
+    console.log("Invalid signal");
+    break;
+}
+
+// Section 5 - Mixed Problems
+
