@@ -17,9 +17,9 @@ let p = 10;
 let q = 20;
 let r = null;
 console.log(q, p);
+r = p;
 p = q;
 q = r;
-r = p;
 console.log(p, q);
 
 // 3. Student Marks
@@ -175,6 +175,16 @@ if (sub1 >= 40 && sub2 >= 40 && sub3 >= 60) {
 
 // 15. Electricity Bill
 
+let unitss = 400;
+let billl = 0;
+if (unitss <= 100) {
+  billl = unitss * 5;
+} else if (unitss <= 200) {
+  billl = (100 * 5 )+ (unitss - 100) * 7;
+} else {
+  billl = (100 * 5) +( 100 * 7) + (unitss - 200) * 10;
+}
+console.log(`The electricity bill = ${billl}`);
 // 16. Simple Login
 
 let username = "admin";
@@ -376,10 +386,9 @@ switch (menu) {
     break;
 }
 
-
 // 23. Traffic Signal
 
-let light = "green"
+let light = "green";
 
 switch (light) {
   case "green":
@@ -399,3 +408,257 @@ switch (light) {
 
 // Section 5 - Mixed Problems
 
+// 24. ATM Transaction
+
+let balance = 10000;
+let withdeawalAmount = 3000;
+
+if (withdeawalAmount > balance) {
+  console.log("Withdrawl ammount is more than balance");
+} else if (withdeawalAmount <= 0) {
+  console.log("withdrawl ammount cannot be 0");
+} else if (withdeawalAmount <= balance) {
+  console.log("Balance ₹", balance);
+  console.log("withdrawal ₹", withdeawalAmount);
+  balance = balance - withdeawalAmount;
+  console.log(`Withdrawal Successful
+    remaining balance :${balance}`);
+}
+
+// 25. Movie Ticket System
+let Aage = 25;
+let numberOfTickets = 3;
+let ticketprice = 0;
+if (Aage < 0) {
+  console.log("Enter a valid age");
+} else if (Aage < 12) {
+  ticketprice = numberOfTickets * 100;
+  console.log(`Age:${Aage}
+    Tickets:${numberOfTickets}
+    Total: ₹${ticketprice}`);
+} else if (Aage >= 12 && Aage <= 59) {
+  ticketprice = numberOfTickets * 200;
+  console.log(`Age:${Aage}
+    Tickets:${numberOfTickets}
+    Total: ₹${ticketprice}`);
+} else {
+  ticketprice = numberOfTickets * 120;
+  console.log(`Age:${Aage}
+    Tickets:${numberOfTickets}
+    Total: ₹${ticketprice}`);
+}
+
+// 26. Restaurant Menu
+
+let choice = 2;
+let quantity = 3;
+let Bill = 0;
+switch (choice) {
+  case 1:
+    Bill = quantity * 150;
+    console.log(` Choice Burger :${choice}
+      Quantity:${quantity}
+      Total ₹:${Bill}`);
+    break;
+  case 2:
+    Bill = quantity * 250;
+    console.log(` Choice Pizza:${choice}
+      Quantity:${quantity}
+      Total ₹:${Bill}`);
+    break;
+  case 3:
+    Bill = quantity * 180;
+    console.log(` Choice Pasta :${choice}
+      Quantity:${quantity}
+      Total ₹:${Bill}`);
+    break;
+  case 4:
+    Bill = quantity * 120;
+    console.log(` Choice Sandwich :${choice}
+      Quantity:${quantity}
+      Total ₹:${Bill}`);
+    break;
+
+  default:
+    console.log("Enter a valid choice");
+    break;
+}
+
+// 27. Electricity Bill + Discount
+
+// let unitcunsumed = 100;
+// let bill = 0;
+// let dics = 0;
+// let finalbill = 0;
+
+// if (unitcunsumed >= 0 && unitcunsumed <= 100) {
+//   bill = unitcunsumed * 5;
+//   if (bill > 2000) {
+//     dics = bill * 0.1;
+//   }
+//   finalbill = bill - dics;
+//   console.log(`unnits =${unitcunsumed}
+//       originalbill = ${bill}
+//       discount = ${dics}
+//       final bill =${finalbill}`);
+// } else if (unitcunsumed >= 101 && unitcunsumed <= 200) {
+//   bill = unitcunsumed * 7;
+//   if (bill > 2000) {
+//     dics = bill * 0.1;
+//   }
+//   finalbill = bill - dics;
+//   console.log(`unnits =${unitcunsumed}
+//       originalbill = ${bill}
+//       discount = ${dics}
+//       final bill =${finalbill}`);
+// } else if (unitcunsumed > 200) {
+//   bill = unitcunsumed * 10;
+//   if (bill > 2000) {
+//     dics = bill * 0.1;
+//   }
+//   finalbill = bill - dics;
+//   console.log(`unnits =${unitcunsumed}
+//       originalbill = ${bill}
+//       discount = ${dics}
+//       final bill =${finalbill}`);
+// } else {
+//   console.log("enter the valid consumed unit");
+// }
+
+// second method
+let unitcunsumed = 201;
+let bill = 0;
+let dics = 0;
+let finalbill = 0;
+
+if (unitcunsumed >= 0 && unitcunsumed <= 100) {
+  bill = unitcunsumed * 5;
+} else if (unitcunsumed >= 101 && unitcunsumed <= 200) {
+  bill = unitcunsumed * 7;
+} else if (unitcunsumed > 200) {
+  bill = unitcunsumed * 10;
+} else {
+  console.log("enter the valid consumed unit");
+}
+
+if (bill >= 2000) {
+  dics = bill * 0.1;
+  finalbill = bill - dics;
+  console.log(`unnits =${unitcunsumed}
+      originalbill = ${bill}
+      discount = ${dics}
+      final bill =${finalbill}`);
+} else {
+  console.log(`unnits =${unitcunsumed}
+      originalbill = ${bill}
+      discount = ${dics}
+      final bill =${finalbill}`);
+}
+
+// 28. Simple ATM Menu
+
+let menuuu = 4;
+let baalance = 10000;
+let deposite = 0;
+let withd = 1000;
+switch (menuuu) {
+  case 1:
+    console.log(`Balance is = ${baalance}`);
+    break;
+  case 2:
+    baalance = baalance + deposite;
+    console.log(`Deposited amount = ${deposite} 
+       new balance =   ${baalance}`);
+    break;
+  case 3:
+    if (baalance >= withd) {
+      baalance = baalance - withd;
+      console.log(`Withdrawal ammount = ${withd} 
+      remaining balance = ${baalance}`);
+    } else {
+      console.log("Not sufficient balance");
+    }
+
+    break;
+  case 4:
+    console.log(`good bye`);
+    break;
+
+  default:
+    console.log("Error 404");
+    break;
+}
+
+// Challenge Questions
+// 29. Number Classification
+
+let nuuumber = -150;
+if (nuuumber > 0) {
+  console.log("Positive");
+} else if (nuuumber < 0) {
+  console.log("Negative");
+} else {
+  console.log("Zero");
+}
+
+if (nuuumber % 2 === 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
+
+if (nuuumber > 100) {
+  console.log("Greater than 100");
+} else if (nuuumber < 100) {
+  console.log("Less than 100");
+} else {
+  console.log("Equal to 100");
+}
+
+// 30. Student Result System
+
+let studentName = "Ayan";
+let rollnumber = 15;
+let mathsmarks = 90;
+let sciencemarks = 90;
+let englishmarks = 90;
+let totalmarks = 0;
+let percentagee = (mathsmarks + englishmarks + sciencemarks) / 3;
+let grade = null;
+let result = null;
+
+if (mathsmarks >= 40 && sciencemarks >= 40 && englishmarks >= 40) {
+  result = "pass";
+} else {
+  result = "fail";
+}
+totalmarks = mathsmarks + sciencemarks + englishmarks;
+
+if (percentagee >= 90) {
+  grade = "A";
+} else if (percentagee >= 80) {
+  grade = "B";
+} else if (percentagee >= 70) {
+  grade = "C";
+} else if (percentagee >= 60) {
+  grade = "D";
+} else if (percentagee >= 40) {
+  grade = "E";
+} else {
+  grade = "F";
+}
+
+console.log(`............................
+  STUDENT RESULT
+............................
+  Name : ${studentName}
+  Roll No : ${rollnumber}
+  Math : ${mathsmarks}
+  Science : ${sciencemarks}
+  English : ${englishmarks}
+  Total : ${totalmarks}
+  Percentages : ${percentagee}
+  Grade : ${grade}
+  Result : ${result}
+...........................
+`);
